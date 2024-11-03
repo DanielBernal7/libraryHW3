@@ -1,0 +1,15 @@
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 50%;           /* Set a specific width */
+    margin: 0 auto;       /* Center horizontally */
+    align-items: center
+}
+
+#innerContainer {
+    display: grid;
+    width: 100%;          /* Take up the full width */
+    margin: 0 auto;       /* Center horizontally */
+    align-items: center
+}
+

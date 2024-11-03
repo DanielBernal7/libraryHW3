@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books By Title</title>
+</head>
+
+<body>
+    <%- include("partials/nav.ejs") %>
+
+        <h1>Books By Title Page</h1>
+        <br><br>
+        <hr>
+
+        <div
+        <% for(let i = 0; i < bookDetails.length; i++) { %>
+            <h2>Title: <%= bookDetails[i].title %> <br><pre>>By - <%= bookDetails[i].author %></pre> 
+            <img src="<%= bookDetails[i].image %>" alt="Book Cover" width="200" height="300"> <br> <br>
+        </h2>
+       <% } %>
+       
+        
+
+
+</body>
+
+</html>
