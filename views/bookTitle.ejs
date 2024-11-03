@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books By Title</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <%- include("partials/nav.ejs") %>
 
-        <h1>Books By Title Page</h1>
+    <form action="/booksByTitle" id="searchByTitle">
+        <input type="text" id="booksByTitle" name="title" placeholder="Search Book By Title">
+        <button>Search</button>
+    </form>
+    <br>
+
+        <h1>You Searched for: <%= title %> </h1>
         <br><br>
         <hr>
 
-        <div
-        <% for(let i = 0; i < bookDetails.length; i++) { %>
-            <h2>Title: <%= bookDetails[i].title %> <br><pre>>By - <%= bookDetails[i].author %></pre> 
-            <img src="<%= bookDetails[i].image %>" alt="Book Cover" width="200" height="300"> <br> <br>
-        </h2>
-       <% } %>
-       
+        <%- include("partials/bookContainer.ejs") %>
         
-
 
 </body>
 

@@ -11,28 +11,16 @@
 <body>
     <%- include("partials/nav.ejs") %>
 
-        <h1>Hello</h1>
 
-        <form action="/booksByTitle">
-            Book By Title:
-            <input type="text" id="booksByTitle" name="title" placeholder="Search">
+        <form action="/booksByTitle" id="searchByTitle">
+            <input type="text" id="booksByTitle" name="title" placeholder="Search Book By Title">
             <button>Search</button>
         </form>
         <br>
-        <h1>Trending Books:</h1>
+        <h1>Trending Books</h1>
         
-      
-        <div id="container">
-            
-            <% for(let i = 0; i < bookDetails.length; i++) { %>
-                <div id="innerContainer">
-                <img src="<%= bookDetails[i].image %>" alt="Book Cover" width="200" height="300">   
-                <p id="titleOfBook"><%= bookDetails[i].title %></p>
-                <p id="author"> By -<%= bookDetails[i].author %> </p>
+      <%- include("partials/bookContainer.ejs") %>
 
-                </div>
-           <% } %>
-        </div>
 
 </body>
 

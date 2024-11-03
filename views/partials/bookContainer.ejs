@@ -1,0 +1,11 @@
+<div class="container">
+    <% for(let i = 0; i < bookDetails.length; i++) { %>
+        <div class="innerContainer">
+        <a href="/bookDetails/<%= bookDetails[i].key %>">  
+        <img src="<%= bookDetails[i].image %>" alt="Book Cover" width="200" height="300" title="<%= bookDetails[i].title %>">   
+        <p id="titleOfBook"><%= bookDetails[i].title %></p>
+        <p id="author"> By -<%= bookDetails[i].author %> </p>
+        </a>
+        </div>
+   <% } %>
+</div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book details</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <%- include("partials/nav.ejs") %>
+
+    <div class="book-detail-container">
+        <h1><%= bookDetails.title %></h1>
+        <p><strong>Author:</strong> <%= bookDetails.author %></p>
+        <img src="<%= bookDetails.coverImage %>" alt="Cover of <%= bookDetails.title %>" width="300">
+        <p><strong>Description:</strong> <%= bookDetails.description %></p>
+        <p><strong>Subjects:</strong> <%= bookDetails.subjects.join(", ") %></p>
+        <p><strong>First Published Year:</strong> <%= bookDetails.firstPublishedYear %></p>
+    </div>
+    
+</body>
+</html>

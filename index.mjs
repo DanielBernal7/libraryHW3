@@ -16,7 +16,7 @@ async function preloadHomeData() {
     let response = await fetch(url);
     let data = await response.json();
 
-    let books = data.works.slice(0, 10);
+    let books = data.works.slice(0, 12);
     let bookDetails = [];
 
     for (let i = 0; i < books.length; i++) {
@@ -63,7 +63,7 @@ app.get("/", async (req, res) => {
   let response = await fetch(url);
   let data = await response.json();
 
-  let books = data.works.slice(0, 10);
+  let books = data.works.slice(0, 12);
   let bookDetails = [];
     
 
@@ -101,7 +101,7 @@ app.get("/booksByTitle", async (req, res) => {
     let response = await fetch(url);
     let data = await response.json();
 
-    let books = data.docs.slice(0, 5);
+    let books = data.docs.slice(0, 8);
     console.log(data);
 
     let bookDetails = [];
@@ -132,7 +132,15 @@ app.get("/booksByTitle", async (req, res) => {
         console.log(bookDetails[i].title);
     }
 
-    res.render("bookTitle.ejs", { bookDetails});
+    res.render("bookTitle.ejs", { bookDetails, title : title });
+  });
+
+
+
+  app.get("/bookDetails", async (req, res) => {
+
+
+    res.render("bookDetails.ejs", );
   });
 
 app.listen(3000, () => {
